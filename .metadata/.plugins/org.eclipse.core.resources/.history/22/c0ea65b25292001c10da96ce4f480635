@@ -1,0 +1,10 @@
+package com.patel.Spring.controller;
+
+import lombok.Data;
+
+@Data
+public class UserExmaple {
+
+	private int userSalay;
+	
+}

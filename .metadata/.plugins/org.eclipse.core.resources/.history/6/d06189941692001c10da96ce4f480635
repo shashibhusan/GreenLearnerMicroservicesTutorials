@@ -1,0 +1,8 @@
+package com.patel.Spring.controller;
+
+
+public class UserExmaple {
+
+	private int userSalay;
+	
+}

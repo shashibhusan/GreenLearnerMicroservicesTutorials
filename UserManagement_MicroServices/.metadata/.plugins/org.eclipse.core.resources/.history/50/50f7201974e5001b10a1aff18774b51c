@@ -1,0 +1,72 @@
+package com.patel.userManagement;
+
+import java.util.List;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+public class ForEntityMethodRestTemplateDemo {
+
+	private String baseUrl="http://localhost:8083/springDataDemo/";
+	RestTemplate restTemplate=new RestTemplate();
+	
+	public void derivedMethod()
+	{
+		System.out.println("ForEntity Example of Rest Template demo");
+		//getSingleObject();
+		//getListOfObject();
+		 addUser();
+	}
+
+	private void addUser() {
+		
+		Person person=new Person();
+		person.setFirstName("Arpit");
+		person.setLastName("Kumar");
+		person.setAddress("Lucknow");
+		person.setGender("Male");
+		
+		String url=baseUrl+"user";
+		ResponseEntity<String> responseEntity=restTemplate.postForEntity(url, String.class);
+		  HttpStatus httpStatus=responseEntity.getStatusCode();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Status Code is One : "+httpStatus);
+		  
+		  String userDetail=responseEntity.getBody();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Response userDetail One : "+userDetail);
+		  
+		  HttpHeaders responseHeaders=responseEntity.getHeaders();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Response Headers One : "+responseHeaders);
+		
+	}
+
+	private void getListOfObject() {
+		String url=baseUrl+"users";
+		ResponseEntity<List> responseEntity=restTemplate.getForEntity(url, List.class);
+		  HttpStatus httpStatus=responseEntity.getStatusCode();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Status Code is Two: "+httpStatus);
+		  
+		  List userDetail=responseEntity.getBody();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Response userDetail Two: "+userDetail);
+		  
+		  HttpHeaders responseHeaders=responseEntity.getHeaders();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Response Headers Two: "+responseHeaders);
+		
+	}
+
+	private void getSingleObject() {
+		String url=baseUrl+"user/7";
+		ResponseEntity<String> responseEntity=restTemplate.getForEntity(url, String.class);
+		  HttpStatus httpStatus=responseEntity.getStatusCode();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Status Code is One : "+httpStatus);
+		  
+		  String userDetail=responseEntity.getBody();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Response userDetail One : "+userDetail);
+		  
+		  HttpHeaders responseHeaders=responseEntity.getHeaders();
+		  System.out.println("ForEntityMethodRestTemplateDemo.Response Headers One : "+responseHeaders);
+		
+	}
+	
+}

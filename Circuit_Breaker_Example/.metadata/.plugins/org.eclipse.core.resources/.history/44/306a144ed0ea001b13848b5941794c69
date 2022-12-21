@@ -1,0 +1,23 @@
+server:
+  port: 9999
+  
+hystrix:
+  command:
+    shashibhusan:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+      circuitBreaker:
+        errorThresholdPercentage: 20
+        sleepWindowInMilliseconds: 5000
+        requestVolumeThreshold: 4
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 40000
+  threadpool:
+    default:
+      coreSize: 10
+      
+management:  endpoints:    web:      base-path: /
+      exposure:        include:  hystrix.stream, health, info,metrics

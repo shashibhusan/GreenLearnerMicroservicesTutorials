@@ -1,0 +1,5 @@
+package com.shashi.circuitBreaker.controller;
+
+public class MainController {
+
+}

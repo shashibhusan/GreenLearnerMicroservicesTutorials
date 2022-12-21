@@ -1,0 +1,5 @@
+package com.shashi.circuitBreaker.service;
+
+public interface ControllerService {
+
+}

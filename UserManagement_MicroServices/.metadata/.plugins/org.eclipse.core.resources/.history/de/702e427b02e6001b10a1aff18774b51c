@@ -1,0 +1,44 @@
+package com.patel.userManagement;
+
+import org.springframework.web.client.RestTemplate;
+
+public class ForObjectMethodRestTemplateDemo {
+
+	private String baseUrl="http://localhost:8083/springDataDemo/";
+	RestTemplate restTemplate=new RestTemplate();
+	
+	public void derivedMethod()
+	{
+		System.out.println("ForObject Example of Rest Template demo");
+		getSingleObject();
+		//getListOfObject();
+		//addUser();
+		//deleteUser();
+		//updateUser();
+	}
+
+	private void updateUser() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void deleteUser() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void addUser() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void getListOfObject() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void getSingleObject() {
+		// TODO Auto-generated method stub
+		
+	}
+}

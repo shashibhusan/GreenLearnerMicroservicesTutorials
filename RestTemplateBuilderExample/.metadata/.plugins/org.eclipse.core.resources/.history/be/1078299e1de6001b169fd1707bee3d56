@@ -1,0 +1,5 @@
+server:
+  port: 8085
+  #ssl:    #key-store: selfsigned.jks
+    #key-password: shashi
+    #key-store-password: bhusan

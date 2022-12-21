@@ -1,0 +1,9 @@
+server:
+  port: 8000
+  
+zuul:  routes:    doctor-service:
+      url: http://localhost:8001
+    patient-service:
+      url: http://localhost:8002
+    diseases-service:
+      url: http://localhost:8003

@@ -1,0 +1,20 @@
+package com.shashi.demo.contoller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MainContorller {
+	
+	@GetMapping("/hello")
+	public List<Employee> TestMethod()
+	{
+		Employee e1=new Employee("shashi", "Bhusan", "Mumbai");
+		Employee e2=new Employee("chandra", "Bhusan", "Ballia");
+		Employee e3=new Employee("Neetu", "Devi", "Masurai");
+		
+	}
+
+}

@@ -1,0 +1,35 @@
+2021-07-07 19:24:37.984  INFO 18720 --- [restartedMain] c.p.P.ProfileDemoApplication             : Starting ProfileDemoApplication using Java 1.8.0_131 on LAPTOP-D0UO0IEN with PID 18720 (E:\GreenLearnerMicroservicesTutorials\ProfileDemoApplication\bin\main started by shashi in E:\GreenLearnerMicroservicesTutorials\ProfileDemoApplication)
+2021-07-07 19:24:37.988  INFO 18720 --- [restartedMain] c.p.P.ProfileDemoApplication             : The following profiles are active: dev
+2021-07-07 19:24:38.060  INFO 18720 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-07-07 19:24:38.061  INFO 18720 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-07-07 19:24:39.587  INFO 18720 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2021-07-07 19:24:39.613  INFO 18720 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-07 19:24:39.615  INFO 18720 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-07 19:24:39.790  INFO 18720 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-07 19:24:39.791  INFO 18720 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1718 ms
+2021-07-07 19:24:40.427  INFO 18720 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-07 19:24:40.483  INFO 18720 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2021-07-07 19:24:40.501  INFO 18720 --- [restartedMain] c.p.P.ProfileDemoApplication             : Started ProfileDemoApplication in 3.171 seconds (JVM running for 4.449)
+2021-07-07 19:24:53.987  INFO 18720 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-07 19:24:53.988  INFO 18720 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-07 19:24:53.990  INFO 18720 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-07-07 19:24:54.029  INFO 18720 --- [http-nio-8088-exec-1] Profile Demo Application                 : Info logging
+2021-07-07 19:24:54.030  WARN 18720 --- [http-nio-8088-exec-1] Profile Demo Application                 : Warning logging
+2021-07-07 19:24:54.031 ERROR 18720 --- [http-nio-8088-exec-1] Profile Demo Application                 : Error Logging
+2021-07-07 19:25:58.702  INFO 18720 --- [restartedMain] c.p.P.ProfileDemoApplication             : Starting ProfileDemoApplication using Java 1.8.0_131 on LAPTOP-D0UO0IEN with PID 18720 (E:\GreenLearnerMicroservicesTutorials\ProfileDemoApplication\bin\main started by shashi in E:\GreenLearnerMicroservicesTutorials\ProfileDemoApplication)
+2021-07-07 19:25:58.703  INFO 18720 --- [restartedMain] c.p.P.ProfileDemoApplication             : The following profiles are active: dev
+2021-07-07 19:25:59.116  INFO 18720 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2021-07-07 19:25:59.117  INFO 18720 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-07-07 19:25:59.118  INFO 18720 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.48]
+2021-07-07 19:25:59.137  INFO 18720 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-07-07 19:25:59.137  INFO 18720 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 428 ms
+2021-07-07 19:25:59.288  INFO 18720 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-07-07 19:25:59.306  INFO 18720 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2021-07-07 19:25:59.311  INFO 18720 --- [restartedMain] c.p.P.ProfileDemoApplication             : Started ProfileDemoApplication in 0.664 seconds (JVM running for 83.259)
+2021-07-07 19:25:59.314  INFO 18720 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-07-07 19:26:09.027  INFO 18720 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-07 19:26:09.030  INFO 18720 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-07-07 19:26:09.031  INFO 18720 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-07-07 19:26:09.035  INFO 18720 --- [http-nio-8088-exec-1] Profile Demo Application                 : Info logging
+2021-07-07 19:26:09.035  WARN 18720 --- [http-nio-8088-exec-1] Profile Demo Application                 : Warning logging
+2021-07-07 19:26:09.035 ERROR 18720 --- [http-nio-8088-exec-1] Profile Demo Application                 : Error Logging

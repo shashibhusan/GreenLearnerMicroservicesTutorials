@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:hsql:hsql://localhost/TestEnvironment
+    username: productionUser
+    password: production@1234
+    
+app:
+  server:
+    name: PRODUCTION SERVER
+    detail: THIS IS PRODUCTION SERVER

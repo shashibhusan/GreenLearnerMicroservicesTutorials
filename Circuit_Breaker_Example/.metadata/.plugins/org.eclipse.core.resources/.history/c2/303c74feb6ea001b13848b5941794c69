@@ -1,0 +1,11 @@
+server:
+  port: 9999
+  
+hystrix:
+  command:
+    shashibhusan:
+      execution:
+        isolaton:
+          thread:
+            timeoutInMillisecond: 5000
+            

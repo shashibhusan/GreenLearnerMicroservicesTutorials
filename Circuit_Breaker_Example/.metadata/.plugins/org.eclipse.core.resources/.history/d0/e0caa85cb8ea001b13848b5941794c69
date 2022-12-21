@@ -1,0 +1,20 @@
+server:
+  port: 9999
+  
+hystrix:
+  command:
+    shashibhusan:
+      execution:
+        isolaton:
+          thread:
+            timeoutInMillisecond: 2000
+      circuitBreaker:
+        errorThresholdPercentage: 20
+        sleepWindowInMillisecong: 5000
+        requestVolumeThreshold: 10
+      metrixs:
+        rollingStats:
+          timeInMillisecond:  40000
+    threadpool:
+      default:
+        coreSize: 10

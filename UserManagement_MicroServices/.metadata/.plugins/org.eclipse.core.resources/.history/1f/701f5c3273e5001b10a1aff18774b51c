@@ -1,0 +1,33 @@
+package com.patel.userManagement;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.client.RestTemplate;
+
+public class ForEntityMethodRestTemplateDemo {
+
+	private String baseUrl="http://localhost:8083/springDataDemo/";
+	RestTemplate restTemplate=new RestTemplate();
+	
+	public void derivedMethod()
+	{
+		System.out.println("ForEntity Example of Rest Template demo");
+		getSingleObject();
+		//getListOfObject();
+		//addUser();
+	}
+
+	private void getSingleObject() {
+		
+		  HttpStatus httpStatus=responseEntity.getStatusCode();
+		  System.out.println("Status Code is : "+httpStatus);
+		  
+		  String userDetail=responseEntity.getBody();
+		  System.out.println("Response userDetail : "+userDetail);
+		  
+		  HttpHeaders responseHeaders=responseEntity.getHeaders();
+		  System.out.println("Response Headers : "+responseHeaders);
+		
+	}
+	
+}

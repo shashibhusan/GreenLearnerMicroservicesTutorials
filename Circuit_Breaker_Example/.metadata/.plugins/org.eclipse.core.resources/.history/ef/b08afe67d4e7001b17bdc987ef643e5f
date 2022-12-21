@@ -1,0 +1,19 @@
+package com.shashi.circuitBreaker.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.shashi.circuitBreaker.service.ControllerService;
+
+@RestController
+public class MainController {
+	
+	@Autowired
+	private ControllerService controllerService;
+	
+	List<User>getUserList()
+	{
+		
+	}
+
+}

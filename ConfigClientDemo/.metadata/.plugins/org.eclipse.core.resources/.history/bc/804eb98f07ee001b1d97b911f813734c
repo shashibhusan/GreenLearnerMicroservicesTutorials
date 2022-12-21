@@ -1,0 +1,11 @@
+package com.shashi.Configclient.controller;
+
+public class ChannelInfo {
+
+	private String source;
+	
+	private String name;
+	
+	private  String url;
+	
+}

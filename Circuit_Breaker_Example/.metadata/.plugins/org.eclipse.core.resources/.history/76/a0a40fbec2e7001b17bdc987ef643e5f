@@ -1,0 +1,9 @@
+package com.shashi.circuitBreaker.service;
+
+public interface ControllerService {
+	
+	public void addUser();
+	
+	List<User>getAllUser();
+
+}

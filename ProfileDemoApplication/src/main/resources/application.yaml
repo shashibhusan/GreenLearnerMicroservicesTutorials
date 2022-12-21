@@ -1,0 +1,21 @@
+server:
+  port: 8088
+    
+app:
+  server:
+    name: DEFAULT SERVER
+    detail: THIS IS DEFAULT SERVER
+    
+spring:  datasource:    url: 127.0.0.0
+    username: default
+    password: default@123  profiles:    active:    - dev
+    
+#logging properties
+logging:  level:    root: info
+    
+
+
+
+   
+    
+    

@@ -1,0 +1,15 @@
+package com.shashi.circuitBreaker.config;
+
+@Configuration
+public class ConfigClass {
+
+	@Bean
+	public RestTemplate restTemplate(RestTemplateBuilder builder)
+	{
+		UriTemplateHandler handler=new RootUriTemplateHandler("http://localhost:8083/springDataDemo");
+		return builder.uriTemplateHandler(handler)
+				.setReadTimeout(Duration.ofMillis(3000))
+				.build();
+	}
+	
+}

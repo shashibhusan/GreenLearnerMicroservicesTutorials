@@ -1,0 +1,139 @@
+package com.patel.Spring.controller;
+
+import java.net.URI;
+import java.util.List;
+
+import javax.websocket.server.PathParam;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import com.patel.Spring.model.User;
+import com.patel.Spring.service.UserService;
+
+@RestController
+public class UserController {
+	
+	@Autowired
+	private UserService userService;
+	
+	Logger log=LoggerFactory.getLogger("UserManagementLogs");
+	
+	//Learning RestTemplate
+	
+	
+	@GetMapping("/restTemplateExample01")
+	public List<User>getAllUsers() getUser()  
+	{
+		return userService.findAllUsers();
+	}
+	
+	@GetMapping("/users")
+	public List<User>getAllUsers() throws InterruptedException
+	{
+		Thread.sleep(2500);
+		log.info("This is the method for getting the all users");
+		return userService.findAllUsers();
+	}
+	
+	@GetMapping("/user/{id}")
+	public User getUserById(@PathVariable Long id)
+	{
+		return userService.findUserById(id);
+	}
+	
+	@PostMapping("/user")
+	public ResponseEntity<User>addUser(@RequestBody User user )
+	{
+		userService.addUser(user);
+		
+		URI path=ServletUriComponentsBuilder.fromCurrentRequest()
+		.path("/{id}").buildAndExpand(user.getId()).toUri();
+		
+		return ResponseEntity.created(path).build();
+	}
+	
+	@PostMapping("/register")
+	public String registerUser(@RequestBody User user )
+	{
+		 
+		userService.addUser(user);
+		
+		return "User register successfully"; 
+	}
+	
+	@DeleteMapping("/user/{id}")
+	public void deleteUser(@PathVariable Long id)
+	{
+		  userService.deleteUserById(id);
+	}
+	
+	@PutMapping("update")
+	public User updateUserById(@RequestBody User user)
+	{
+		return userService.updateUser(user);
+	}
+	
+	@GetMapping("/byLastName/{lname}")
+	public List<User> getUserByFirstName(@PathVariable String lname)
+	{
+		return userService.getAllUserByLastName(lname);
+	}
+	
+	@GetMapping("/byGender/{gender}")
+	public List<User> getUserByGender(@PathVariable String gender)
+	{
+		return userService.getAllUserByGender(gender);
+	}
+	
+	@PutMapping("updateAddress/{id}/{newAddress}")
+	public String updateUserAddressById(@PathVariable Long id,@PathVariable String newAddress)
+	{
+		return userService.updateAddressById(id, newAddress);
+	}
+	
+	@GetMapping("/findAllSortedUser/{sortingParam}")
+	public List<User> findAllSortedUser(@PathVariable String sortingParam)
+	{
+		return userService.findSortedUsers(sortingParam);
+	}
+	
+	@GetMapping("/findAllUserByGenderAndSort/{gender}/{sortingParam}")
+	public List<User> findAllUserByGenderAndSort(@PathVariable String gender,@PathVariable String sortingParam)
+	{
+		return userService.getAllUserByGenderAndSort(gender, sortingParam);
+	}
+	
+	@GetMapping("/findAllUserPagewise/{pageNumber}/{numberOfElementPerPage}")
+	public Page<User> findAllUserByGenderAndSort(@PathVariable int pageNumber,@PathVariable int numberOfElementPerPage)
+	{
+		return userService.findAllUserByPageWise(pageNumber, numberOfElementPerPage);
+	}
+	
+	//Sending multiple value in path variable
+	
+	@GetMapping("/test/{value1}/{value2}")
+	public String exampleOne(@PathVariable String value1,@PathVariable String value2)
+	{
+		 return ""+value1+"   "+value2;
+	}
+	
+	//Example of @PathParam
+	@GetMapping("/exampleTwo/{value1}/{value2}")
+	public String exampleTwo(@PathParam("value1") String v1,@PathParam("value2") String v2)
+	{
+		 return ""+v1+"   "+v2;
+	}
+	 
+}

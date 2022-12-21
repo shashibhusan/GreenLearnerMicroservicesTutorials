@@ -1,0 +1,42 @@
+package com.shashi.circuitBreaker.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.client.RestTemplate;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.shashi.circuitBreaker.model.User;
+
+@Repository
+public class ConrollerServiceImpl implements ControllerService{
+
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@Override
+	public List<User> getAllUser() {
+		
+		List<User>  user=restTemplate.getForObject("/users", List.class);
+		return user;
+	}
+	
+	@HystrixCommand(fallbackMethod = "fallbackMethodOfCircuitBreaker")
+	@Override
+	public String addUser() {
+		User user=new User();
+		user.setFirstName("Nitish");
+		user.setLastName("Chaudhary");
+		user.setAddress("Awas Vikas Colony");
+		user.setGender("Male");
+		return restTemplate.postForObject("/user",user,String.class);
+	}
+
+	public String fallbackMethodOfCircuitBreaker()
+	{
+		System.out.println("Fallback method invoked");
+		return "This is fallback method";
+	}
+
+}

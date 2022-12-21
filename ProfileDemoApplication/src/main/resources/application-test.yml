@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:hsql:hsql://localhost/TestEnvironment
+    username: test
+    password: test@1234
+    
+    
+app:
+  server:
+    name: TEST SERVER  
+    detail: THIS IS TEST SERVER
+    
+ 

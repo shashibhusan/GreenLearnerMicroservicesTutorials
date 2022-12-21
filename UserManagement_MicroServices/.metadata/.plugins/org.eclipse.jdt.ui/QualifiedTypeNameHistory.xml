@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.awt.PageAttributes.MediaType"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpEntity"/>
+<fullyQualifiedTypeName name="com.patel.userManagement.Person"/>
+<fullyQualifiedTypeName name="com.patel.userManagement.ForEntityMethodRestTemplateDemo"/>
+<fullyQualifiedTypeName name="com.patel.userManagement.ForObjectMethodRestTemplateDemo"/>
+<fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
+<fullyQualifiedTypeName name="org.slf4j.Logger"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,15 @@
+package com.patel.userManagement;
+
+import org.springframework.web.client.RestTemplate;
+
+public class ForEntityMethodRestTemplateDemo {
+
+	private String baseUrl="http://localhost:8083/springDataDemo/";
+	RestTemplate restTemplate=new RestTemplate();
+	
+	public void derivedMethod()
+	{
+		
+	}
+	
+}

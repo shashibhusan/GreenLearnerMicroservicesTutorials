@@ -1,0 +1,7 @@
+package com.patel.userManagement;
+
+public class ForEntityMethodRestTemplateDemo {
+
+	private String baseUrl="http://localhost:8083/springDataDemo/";
+	
+}

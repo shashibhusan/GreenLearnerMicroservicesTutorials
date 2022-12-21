@@ -1,0 +1,5 @@
+package com.patel.RestTemplateDemo.Controller;
+
+public class User {
+
+}

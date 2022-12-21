@@ -1,0 +1,6 @@
+server:
+  port: 8085
+  # This how we can enable the SSL in spring Boot application
+  #ssl:    #key-store: selfsigned.jks
+    #key-password: shashi
+    #key-store-password: bhusan

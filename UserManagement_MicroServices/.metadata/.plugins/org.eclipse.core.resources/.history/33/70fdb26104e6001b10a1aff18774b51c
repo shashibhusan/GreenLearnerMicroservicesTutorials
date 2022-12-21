@@ -1,0 +1,57 @@
+package com.patel.userManagement;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+public class ForObjectMethodRestTemplateDemo {
+
+	Logger log=LoggerFactory.getLogger(ForObjectMethodRestTemplateDemo.class);
+	private String baseUrl="http://localhost:8083/springDataDemo/";
+	RestTemplate restTemplate=new RestTemplate();
+	
+	public void derivedMethod()
+	{
+		System.out.println("ForObject Example of Rest Template demo");
+		getSingleObject();
+		//getListOfObject();
+		//addUser();
+		//deleteUser();
+		//updateUser();
+	}
+
+	private void updateUser() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void deleteUser() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void addUser() {
+		String url=baseUrl+"user"; 
+		Person person=new Person();
+		person.setFirstName("Sanjeev");
+		person.setLastName("Kumar");
+		person.setAddress("Gorakhpur");
+		person.setGender("Male");
+		
+	}
+
+	private void getListOfObject() {
+		String url=baseUrl+"users";
+		List userList=restTemplate.getForObject(url, List.class); 
+		log.info(" All user list is "+userList);
+	}
+
+	private void getSingleObject() {
+		String url=baseUrl+"user/1";
+		String userDeatils=restTemplate.getForObject(url, String.class); 
+		log.info(" User Details "+userDeatils);
+	}
+}

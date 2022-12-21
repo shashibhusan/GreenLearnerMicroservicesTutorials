@@ -1,0 +1,29 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.patel'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly("org.springframework.boot:spring-boot-devtools")
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation('org.springframework.boot:spring-boot-starter-security')
+	
+	implementation('io.springfox:springfox-swagger2:3.0.0')
+	implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.0.2'
+
+}
+
+test {
+	useJUnitPlatform()
+}

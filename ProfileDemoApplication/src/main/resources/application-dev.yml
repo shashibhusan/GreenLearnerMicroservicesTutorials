@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:hsql:hsql://localhost/DevelopmentEnvironment
+    username: dev
+    password: dev@1234
+    
+app:
+  server:
+    name: DEV SERVER
+    detail: THIS IS THE DEV SERVER
